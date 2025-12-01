@@ -8,3 +8,5 @@ comunas.shp.xml
 comunas.shx
 Regional.shp
 comunas.prj
+.venv/
+__pycache__/
