@@ -1,0 +1,10 @@
+-----------------------------------------------------------------------------------------
+dame el codigo que descargue el archivo .xlsx:
+# file download link for data from 4th grade SIMCE
+
+file_download_link = "https://drive.usercontent.google.com/download?id=14cr_NcbnRlxGBAE2KwluXO5RWcV7h27a&export=download&authuser=0&confirm=t&uuid=ab338839-bb46-415c-9e0b-baa349f66125&at=ALWLOp58TXtgKEDFavl5Kn2Hru6H:1762816912784"
+
+y que lo guarde en una carpeta llamada "Datos" dentro del mismo directorio en el que esta.
+si la carpeta no esta creada la crea
+-----------------------------------------------------------------------------------------
+
