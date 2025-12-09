@@ -1,12 +1,3 @@
-RBDSimce4toBasico2014-2024.xlsx
-comunas.CPG
-comunas.dbf
-comunas.sbn
-comunas.sbx
-comunas.shp
-comunas.shp.xml
-comunas.shx
-Regional.shp
-comunas.prj
 .venv/
 __pycache__/
+Datos/
