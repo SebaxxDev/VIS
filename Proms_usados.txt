@@ -8,4 +8,18 @@ y que lo guarde en una carpeta llamada "Datos" dentro del mismo directorio en el
 si la carpeta no esta creada la crea
 -----------------------------------------------------------------------------------------
 
+Actúa como un Ingeniero de Datos experto en Python y Pandas.
+
+Tengo un DataFrame concatenado llamado df_simce_rm_bruto que contiene datos históricos del SIMCE. Tengo un problema de inconsistencia de datos en la columna cod_com_rbd (código de comuna):
+En la mayoría de los años, el código sigue el estándar CUT de 5 dígitos (ej: 13101 para Santiago).
+En ciertos años (como 2015 y 2017), el código viene corrupto o en un formato interno antiguo de 1 a 3 dígitos (ej: 1 para Santiago), lo cual rompe mi integración con los mapas.
+
+Necesito un script robusto de "Auto-Reparación" que haga lo siguiente:
+- Normalización de Texto: Crea una función auxiliar para estandarizar la columna nom_com_rbd (nombre de comuna), eliminando acentos, espacios y pasando todo a mayúsculas (para que "Ñuñoa" coincida con "NUNOA").
+- Diccionario Maestro: Crea un diccionario de referencia {nombre_normalizado: código_correcto} utilizando solo las filas del DataFrame donde el código sea válido (es decir, cod_com_rbd > 10000).
+- Imputación/Reparación: Aplica una función que recorra el DataFrame. Si el código es inválido (< 10000), debe buscar el nombre de la comuna en el diccionario maestro y reemplazar el código corrupto por el correcto.
+- Agregación Final: Una vez reparados los códigos, agrupa los datos por agno y el código reparado. Calcula el promedio (mean) de las columnas prom_lect4b_rbd y prom_mate4b_rbd.
+- Formato: Renombra las columnas finales a: 'Año', 'Codigo Comuna', 'Comuna', 'Avg Reading Score', 'Avg Math Score' y asegúrate de que el Código de Comuna sea de tipo int.
+
+-----------------------------------------------------------------------------------------
 
